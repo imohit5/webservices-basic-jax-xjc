@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mi9dev.com/Employee"
+	xmlns:tns="http://www.mi9dev.com/Employee" elementFormDefault="qualified">
+
+	<element name="employeeRequest" type="tns:EmployeeRequest"></element>
+	<element name="employeeResponse" type="tns:EmployeeResponse"></element>
+
+	<complexType name="EmployeeRequest">
+		<sequence>
+			<element name="id" type="int" minOccurs="0" maxOccurs="1" />
+			<element name="name" type="string" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+
+	<complexType name="EmployeeResponse">
+		<sequence>
+			<element name="id" type="int" minOccurs="1" maxOccurs="1" />
+			<element name="name" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="gender" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="email" type="string" minOccurs="1" maxOccurs="unbounded" />
+			<element name="phone" type="string" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+</schema>
